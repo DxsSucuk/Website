@@ -61,7 +61,7 @@
     .card {
         background: rgba(255, 255, 255, 0.1);
         padding: 50px;
-        width: 20%;
+        min-width: 30%;
         border-radius: 12px;
         backdrop-filter: blur(10px);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -75,14 +75,24 @@
     }
 
     /* Profile Image */
-    .about .img {
+    .img {
         background-size: cover;
         background-position: center;
         width: 150px;
         height: 150px;
         border-radius: 50%;
-        box-shadow: 0 0 20px 10px var(--dark-contrast);
         margin-top: 10px;
+    }
+
+    .presti {
+        box-shadow: 0 0 20px 10px var(--dark-contrast);
+        background-image: url('presti.png');
+    }
+
+
+    .project {
+        box-shadow: 0 0 20px 10px var(--main-contrast);
+        border-radius: 10%;
     }
 
     /* Text Section */
