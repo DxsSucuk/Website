@@ -1,0 +1,126 @@
+    :root {
+        --main-presti: #7800FF;
+        --main-contrast: #EA7AF4;
+        --dark-contrast: #00BFB2;
+        /* Maybe use in the future? Looks to ugly rn to use anywhere */
+    }
+
+    body {
+        font-family: Nunito, Arial, sans-serif;
+        background: var(--main-presti);
+        background: linear-gradient(90deg, var(--main-presti) 0%, var(--main-contrast) 100%);
+        color: white;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: var(--main-presti);
+        padding: 20px 0;
+        min-width: 80px;
+        width: 80px;
+        border-radius: 0 40px 40px 0;
+        box-shadow: 0 0 10px var(--main-contrast);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .sidebar a {
+        color: white;
+        font-size: 24px;
+        padding: 10px;
+        transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+        color: var(--main-contrast);
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .content {
+        margin-top: 10%;
+        margin-left: 120px;
+        padding: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 50px;
+        width: 20%;
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    /* About Me Card */
+    .about {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Profile Image */
+    .about .img {
+        background-size: cover;
+        background-position: center;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        box-shadow: 0 0 20px 10px var(--dark-contrast);
+        margin-top: 10px;
+    }
+
+    /* Text Section */
+    .about-text {
+        flex: 1;
+    }
+
+    .about-text h2 {
+        margin: 0;
+        font-size: 24px;
+        margin-left: 15px;
+        text-align: left;
+    }
+
+    .about-text p {
+        margin-top: 5px;
+        font-size: 16px;
+        margin-left: 15px;
+        text-align: left;
+    }
+
+    .card h2 {
+        margin-top: -15px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .social-icons a {
+        color: white;
+        font-size: 24px;
+        transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+        color: var(--main-contrast);
+    }
