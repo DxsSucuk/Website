@@ -201,10 +201,6 @@ a {
         justify-content: center;
     }
 
-    .sidebar a:nth-child(n+4) {
-        display: none;
-    }
-
     .icons a {
         flex: 1 1 30%;
     }
@@ -225,9 +221,5 @@ a {
     .img {
         width: 120px;
         height: 120px;
-    }
-
-    .sidebar a:nth-child(n+3) {
-        display: none;
     }
 }
