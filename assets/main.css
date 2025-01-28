@@ -1,136 +1,235 @@
-    :root {
-        --main-presti: #7800FF;
-        --main-contrast: #EA7AF4;
-        --dark-contrast: #00BFB2;
-        /* Maybe use in the future? Looks to ugly rn to use anywhere */
+:root {
+    --main-presti: #7800FF;
+    --main-contrast: #EA7AF4;
+    --dark-contrast: #00BFB2;
+}
+
+body {
+    font-family: Nunito, Arial, sans-serif;
+    background: var(--main-presti);
+    background: linear-gradient(90deg, var(--main-presti) 0%, var(--main-contrast) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--main-presti) 0%, var(--main-contrast) 100%);
+    z-index: -1;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--main-presti);
+    padding: 20px 0;
+    min-width: 80px;
+    width: 80px;
+    border-radius: 0 40px 40px 0;
+    box-shadow: 0 0 10px var(--main-contrast);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar a {
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: var(--main-contrast);
+}
+
+a {
+    text-decoration: none;
+}
+
+.content {
+    margin-top: 10%;
+    margin-left: 120px;
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 50px;
+    min-width: 30%;
+    max-width: 90%;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+}
+
+.img {
+    background-size: cover;
+    background-position: center;
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 50%;
+}
+
+.presti {
+    box-shadow: 0 0 20px 10px var(--dark-contrast);
+    background-image: url('presti.png');
+}
+
+.project {
+    box-shadow: 0 0 20px 10px var(--main-contrast);
+    border-radius: 10%;
+}
+
+.project p {
+    color: aqua;
+    text-shadow: black 2px 2px 0px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    margin: 0;
+    font-size: 24px;
+    margin-left: 15px;
+    text-align: left;
+}
+
+.about-text p {
+    margin-top: 5px;
+    font-size: 16px;
+    margin-left: 15px;
+    text-align: left;
+}
+
+.card h2 {
+    margin-top: -15px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.icons a {
+    color: white;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.icons a:hover {
+    color: var(--main-contrast);
+}
+
+/* Tablet Screens */
+@media (max-width: 1024px) {
+    .content {
+        margin-left: 100px;
+        padding: 30px;
     }
 
-    body {
-        font-family: Nunito, Arial, sans-serif;
-        background: var(--main-presti);
-        background: linear-gradient(90deg, var(--main-presti) 0%, var(--main-contrast) 100%);
-        color: white;
-        margin: 0;
-        padding: 0;
-        display: flex;
+    .card {
+        padding: 40px;
+        width: 80%;
     }
 
     .sidebar {
         position: fixed;
+        top: 0;
         left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        background: var(--main-presti);
-        padding: 20px 0;
-        min-width: 80px;
-        width: 80px;
-        border-radius: 0 40px 40px 0;
-        box-shadow: 0 0 10px var(--main-contrast);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .sidebar a {
-        color: white;
-        font-size: 24px;
-        padding: 10px;
-        transition: 0.3s;
-    }
-
-    .sidebar a:hover {
-        color: var(--main-contrast);
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    .content {
-        margin-top: 10%;
-        margin-left: 120px;
-        padding: 50px;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
+        height: 60px;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 0;
+        transform: translateY(0);
+        padding: 10px 0;
+    }
+
+    .icons a {
+        flex: 1 1 40%;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+    .content {
+        margin-top: 70px;
+        margin-left: 0;
+        padding: 20px;
     }
 
     .card {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 50px;
-        min-width: 30%;
-        border-radius: 12px;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        text-align: center;
+        width: 95%;
     }
 
-    /* About Me Card */
-    .about {
-        display: flex;
-        align-items: center;
-    }
-
-    /* Profile Image */
-    .img {
-        background-size: cover;
-        background-position: center;
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        margin-top: 10px;
-    }
-
-    .presti {
-        box-shadow: 0 0 20px 10px var(--dark-contrast);
-        background-image: url('presti.png');
-    }
-
-
-    .project {
-        box-shadow: 0 0 20px 10px var(--main-contrast);
-        border-radius: 10%;
-    }
-
-    /* Text Section */
-    .about-text {
-        flex: 1;
-    }
-
-    .about-text h2 {
-        margin: 0;
-        font-size: 24px;
-        margin-left: 15px;
-        text-align: left;
-    }
-
-    .about-text p {
-        margin-top: 5px;
-        font-size: 16px;
-        margin-left: 15px;
-        text-align: left;
-    }
-
-    .card h2 {
-        margin-top: -15px;
-    }
-
-    .social-icons {
-        display: flex;
+    .sidebar {
+        height: 50px;
+        width: 100%;
+        top: 0;
+        flex-direction: row;
         justify-content: center;
-        gap: 15px;
-        margin-top: 10px;
     }
 
-    .social-icons a {
-        color: white;
-        font-size: 24px;
-        transition: 0.3s;
+    .sidebar a:nth-child(n+4) {
+        display: none;
     }
 
-    .social-icons a:hover {
-        color: var(--main-contrast);
+    .icons a {
+        flex: 1 1 30%;
     }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+    .content {
+        padding: 15px;
+        margin-top: 60px;
+    }
+
+    .card {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .sidebar a:nth-child(n+3) {
+        display: none;
+    }
+}
