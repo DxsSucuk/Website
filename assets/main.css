@@ -17,6 +17,10 @@ body {
     display: flex;
 }
 
+.fuckHeadAss {
+    visibility: hidden;
+}
+
 body::before {
     content: "";
     position: fixed;
@@ -149,6 +153,21 @@ a {
 
 .icons a:hover {
     color: var(--main-contrast);
+}
+
+@media (width: 360px) and (height: 640px) {
+    .content-entry {
+        visibility: hidden;
+    }
+
+    .sidebar {
+        visibility: hidden;
+    }
+
+    .fuckHeadAss {
+        visibility: visible;
+        font-size: x-large;
+    }
 }
 
 /* Tablet Screens */
