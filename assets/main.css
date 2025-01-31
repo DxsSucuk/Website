@@ -158,15 +158,17 @@ a {
 @media (width: 360px) and (height: 640px) {
     .content-entry {
         visibility: hidden;
+        display: none;
     }
 
     .sidebar {
         visibility: hidden;
+        display: none;
     }
 
     .fuckHeadAss {
         visibility: visible;
-        font-size: x-large;
+        font-size: xx-large;
     }
 }
 
